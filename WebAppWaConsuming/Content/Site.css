@@ -1,0 +1,71 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/*====================WEBGRIDVIEW====================*/
+WebGridView {
+    width: 100%;
+}
+
+.gvHeading th {
+    border: 1px solid #e0e8df;
+    background: #717171;
+    color: #FFF;
+    text-align: center;
+    padding: 5px 5px;
+}
+
+.gvHeading a {
+    color: #FFF;
+}
+
+.gvRow {
+    background: #FFF;
+}
+
+    .gvRow td {
+        border: 1px solid #000;
+        color: #063503;
+        padding: 5px 5px;
+    }
+
+.gvAlternateRow {
+    background: #FFF;
+}
+
+    .gvAlternateRow td {
+        border: 1px solid #000;
+        color: #063503;
+        padding: 5px 5px;
+    }
+
+.gvFooter {
+    background: #717171;
+    color: #a6ada6;
+    border: 1px solid #e0e8df;
+}
+
+    .gvFooter a {
+        color: #FFF;
+    }

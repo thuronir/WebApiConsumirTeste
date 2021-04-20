@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Inicio";
+}
+@model List<WebAppWaConsuming.Models.PedidosModel>
+
+    @if (Model.Count >= 1)
+    {
+        <div class="WebGridView">
+            <div id="gridPedidos">
+                @{
+                    var grid = new WebGrid(Model, rowsPerPage: 20, canPage: true, canSort: false, ajaxUpdateContainerId: "gridPedidos");
+                    @grid.GetHtml(
+                       tableStyle: "grid",
+                       fillEmptyRows: false,
+                       headerStyle: "gvHeading",
+                       alternatingRowStyle: "gvAlternateRow",
+                       rowStyle: "gvRow",
+                       footerStyle: "gvFooter",
+                       mode: WebGridPagerModes.All,
+                       firstText: "<< Primeiro",
+                       previousText: "< Anterior",
+                       nextText: "Próximo >",
+                       lastText: "Último >>",
+                       columns: new[] {
+        grid.Column("CodigoPedido",header: "Código"),
+        grid.Column("DataCriacao",header: "Data de Criação"),
+        grid.Column("Produto",header: "Produto"),
+        grid.Column("Quantidade",header: "Quantidade"),
+        grid.Column("DataEntrega", header: "Data de Entrega"),
+        grid.Column("Equipe", header: "Equipe"),
+        grid.Column("Endereco", header: "Endereço")                                                                                                                                               })
+                }
+            </div>
+        </div>
+    }
